@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>hrm_parent</artifactId>
+        <groupId>com.hrm</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>hrm_company</artifactId>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.hrm</groupId>
+            <artifactId>hrm_common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hrm</groupId>
+            <artifactId>hrm_common_model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--springcloud alibb jpa 类似于mybatis的一个框架，可以封装了CURD等操作-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--mysql数据库链接器，封装了jdbc等操作，方便我们操作数据库-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
