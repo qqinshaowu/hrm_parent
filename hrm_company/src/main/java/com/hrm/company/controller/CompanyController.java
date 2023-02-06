@@ -3,6 +3,7 @@ package com.hrm.company.controller;
 
 import com.hrm.common.entity.Result;
 import com.hrm.common.entity.ResultCode;
+import com.hrm.common.exception.CommonException;
 import com.hrm.company.service.CompanyService;
 import com.hrm.domain.company.Company;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,11 +57,13 @@ public class CompanyController {
     * 根据id查询企业*/
 
     @RequestMapping(value = "/selectCompany/{id}",method = RequestMethod.GET)
-    public Result selectCompany(@PathVariable(value = "id") String id){
+    public Result selectCompany(@PathVariable(value = "id") String id) throws CommonException {
 
-        Company company = companyService.selectCompanyById(id);
-
-        return new Result(ResultCode.SUCCESS,company);
+        throw new CommonException(ResultCode.UNAUTHORISE);
+//
+////        Company company = companyService.selectCompanyById(id);
+////
+////        return new Result(ResultCode.SUCCESS,company);
     }
 
     /*
@@ -69,6 +72,7 @@ public class CompanyController {
     * */
     @RequestMapping(value = "/selectAllCompanyController",method = RequestMethod.GET)
     public Result selectAllCompanyController(){
+        int i = 1/0;
         List<Company> companies = companyService.selectAllCompany();
         return new Result(ResultCode.SUCCESS,companies);
 
